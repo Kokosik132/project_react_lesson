@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import {SingleUser, Users} from "./components";
+import {useState} from "react";
+import {Form1} from "./components/Form1/Form1";
+import {Form2} from "./components/Form2/Form2";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [singleUser, setSingleUser] = useState(null);
+
+
+    return (
+        <div>
+            {/*{singleUser && <SingleUser user={singleUser}/>}*/}
+            {/*<Users getUser={setSingleUser}/>*/}
+            {/*<Form1/>*/}
+            <Form2/>
+        </div>
+    );
 }
 
 export default App;
